@@ -73,7 +73,7 @@ let zeppelinWebApp = angular.module('zeppelinWebApp', requiredModules)
       }
     };
   })
-  .config(function($httpProvider, $routeProvider,$locationProvider,ngToastProvider) {
+  .config(function($httpProvider, $routeProvider, $locationProvider, ngToastProvider) {
     // withCredentials when running locally via grunt
     $httpProvider.defaults.withCredentials = true;
 
@@ -139,7 +139,7 @@ let zeppelinWebApp = angular.module('zeppelinWebApp', requiredModules)
       .otherwise({
         redirectTo: '/',
       });
-			$locationProvider.html5Mode(true);	//启用html5模式
+    $locationProvider.html5Mode(true);	// 启用html5模式
     ngToastProvider.configure({
       dismissButton: true,
       dismissOnClick: false,
