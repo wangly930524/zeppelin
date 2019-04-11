@@ -1,5 +1,5 @@
 const globalVal = {
-  'headIsShow': true,		// 头部是否显示
+  'headIsShow': 1,		// 头部是否显示
   cube(x) {
     return x*x*x;
   },
@@ -18,6 +18,6 @@ function getQueryVariable(variable) {
   return (false);
 }
 
-globalVal.headIsShow = getQueryVariable('isShow') === 'true';
+globalVal.headIsShow = getQueryVariable('isShow') === '1'? true:false;  // 1显示 2不显示
 
 export {globalVal};

@@ -14,9 +14,10 @@
 
 angular.module('zeppelinWebApp').controller('MainCtrl', MainCtrl);
 
-function MainCtrl($scope, $rootScope, $window, arrayOrderingSrv, globalVal) {
+function MainCtrl($scope, $rootScope, $window, arrayOrderingSrv, globalVal, $location) {
   'ngInject';
-
+  console.log('location-----------');
+  console.log($location.search());
   $scope.looknfeel = 'default';
   $scope.global = globalVal;			// global.js
   let init = function() {
