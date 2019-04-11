@@ -139,7 +139,7 @@ let zeppelinWebApp = angular.module('zeppelinWebApp', requiredModules)
       .otherwise({
         redirectTo: '/',
       });
-			$locationProvider.html5Mode(true);	//启用html5模式
+		//	$locationProvider.html5Mode(true);	//启用html5模式
     ngToastProvider.configure({
       dismissButton: true,
       dismissOnClick: false,
