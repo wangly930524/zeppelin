@@ -23,7 +23,7 @@ import 'angular-viewport-watch/angular-viewport-watch.js';
 
 import 'angular-ui-grid/ui-grid.css';
 import 'angular-ui-grid';
-
+import {globalVal} from './global/global.js';
 const requiredModules = [
   'ngCookies',
   'ngAnimate',
@@ -169,6 +169,8 @@ let zeppelinWebApp = angular.module('zeppelinWebApp', requiredModules)
       $httpProvider.interceptors.push('httpInterceptor');
     })
   .constant('TRASH_FOLDER_ID', '~Trash');
+
+zeppelinWebApp.value('globalVal', globalVal);
 
 function auth() {
   let $http = angular.injector(['ng']).get('$http');

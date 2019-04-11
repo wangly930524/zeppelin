@@ -14,15 +14,14 @@
 
 angular.module('zeppelinWebApp').controller('MainCtrl', MainCtrl);
 
-function MainCtrl($scope, $rootScope, $window, arrayOrderingSrv) {
+function MainCtrl($scope, $rootScope, $window, arrayOrderingSrv, globalVal) {
   'ngInject';
 
   $scope.looknfeel = 'default';
-
+  $scope.global = globalVal;			// global.js
   let init = function() {
     $scope.asIframe = (($window.location.href.indexOf('asIframe') > -1) ? true : false);
   };
-
   init();
 
   $rootScope.$on('setIframe', function(event, data) {

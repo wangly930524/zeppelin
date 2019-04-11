@@ -105,9 +105,12 @@ limitations under the License.
           transform: rotate(360deg);
         }
       }
+      .hasHead {
+        padding-top: 0;
+      }
     </style>
   </head>
-  <body ng-class="{'bodyAsIframe': asIframe}">
+  <body ng-class="{'bodyAsIframe': asIframe,'hasHead': !global.headIsShow}">
   <div id="pre-loader">
     <div class="pre-loader-content">
       <div class="loader"></div>

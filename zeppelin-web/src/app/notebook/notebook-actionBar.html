@@ -11,8 +11,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
+<style>
+  .ihasHead {
+    top: 0 !important;
+  }
+</style>
 <headroom tolerance="10" offset="30" class="noteAction"
-          ng-show="note.id && !paragraphUrl">
+          ng-show="note.id && !paragraphUrl"
+          ng-class="{'ihasHead': !global.headIsShow}">
   <h3>
     <div class="notebook-actionBar-title"
          ng-controller="ElasticInputCtrl as input">
