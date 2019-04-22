@@ -73,15 +73,15 @@ public class CorsFilter implements Filter {
   }
 
   private void addCorsHeaders(HttpServletResponse response, String origin) {
-    response.setHeader("Access-Control-Allow-Origin", origin);
-    response.setHeader("Access-Control-Allow-Credentials", "true");
-    response.setHeader("Access-Control-Allow-Headers", "authorization,Content-Type");
+    response.setHeader("Access-Control-Allow-Origin", "*");
+//    response.setHeader("Access-Control-Allow-Credentials", "true");
+//    response.setHeader("Access-Control-Allow-Headers", "authorization,Content-Type");
     response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, HEAD, DELETE");
     DateFormat fullDateFormatEN =
         DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL, new Locale("EN", "en"));
     response.setHeader("Date", fullDateFormatEN.format(new Date()));
     ZeppelinConfiguration zeppelinConfiguration = ZeppelinConfiguration.create();
-    response.setHeader("X-FRAME-OPTIONS", zeppelinConfiguration.getXFrameOptions());
+    response.setHeader("X-FRAME-OPTIONS", "");
     if (zeppelinConfiguration.useSsl()) {
       response.setHeader("Strict-Transport-Security", zeppelinConfiguration.getStrictTransport());
     }
